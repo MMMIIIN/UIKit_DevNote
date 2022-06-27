@@ -11,11 +11,6 @@ import SnapKit
 
 class LetterViewController: BaseViewController {
 
-    private enum LetterState: String, CaseIterable {
-        case sent = "보낸 쪽지"
-        case received = "받은 쪽지"
-    }
-
     var segmentIndex: Int = 0 {
         didSet {
             letterSegmentCotrol.selectedSegmentIndex = segmentIndex
