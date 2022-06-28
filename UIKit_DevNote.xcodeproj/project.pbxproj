@@ -19,6 +19,7 @@
 		39EC87032869AA410031EA61 /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC87022869AA410031EA61 /* LetterViewController.swift */; };
 		39EC87072869AD860031EA61 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC87062869AD860031EA61 /* UIFont+Extension.swift */; };
 		39EC87082869B0F00031EA61 /* DungGeunMo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39EC87052869ACFF0031EA61 /* DungGeunMo.otf */; };
+		39EC870B286B1C470031EA61 /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC870A286B1C470031EA61 /* LetterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		39EC87022869AA410031EA61 /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 		39EC87052869ACFF0031EA61 /* DungGeunMo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DungGeunMo.otf; sourceTree = "<group>"; };
 		39EC87062869AD860031EA61 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		39EC870A286B1C470031EA61 /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		39EC87012869AA2B0031EA61 /* Letter */ = {
 			isa = PBXGroup;
 			children = (
+				39EC8709286B1C200031EA61 /* Cell */,
 				39EC87022869AA410031EA61 /* LetterViewController.swift */,
 			);
 			path = Letter;
@@ -210,6 +213,14 @@
 				39EC87052869ACFF0031EA61 /* DungGeunMo.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		39EC8709286B1C200031EA61 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				39EC870A286B1C470031EA61 /* LetterCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39EC870B286B1C470031EA61 /* LetterCollectionViewCell.swift in Sources */,
 				39EC87072869AD860031EA61 /* UIFont+Extension.swift in Sources */,
 				39EC86DD28698FDE0031EA61 /* MainViewController.swift in Sources */,
 				39EC86FB286993A00031EA61 /* BaseViewController.swift in Sources */,
