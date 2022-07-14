@@ -32,10 +32,7 @@ class DispatchQueueExampleViewController: UIViewController {
 
     // MARK: - property
 
-    private lazy var testImage: UIImageView = {
-        let view = UIImageView()
-        return view
-    }()
+    private lazy var testImage = UIImageView()
     private let flowLayOut: UICollectionViewFlowLayout = {
         let collectionViewLayer = UICollectionViewFlowLayout()
         collectionViewLayer.scrollDirection = .vertical
