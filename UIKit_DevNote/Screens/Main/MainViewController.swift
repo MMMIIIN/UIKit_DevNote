@@ -12,28 +12,41 @@ import SnapKit
 class MainViewController: BaseViewController {
 
     // MARK: property
-
-    private let textLabel: UILabel = {
-        let label = UILabel()
-//        label.textColor = .white
-        label.text = "testing"
-        return label
+    private lazy var dispatchNavigatorButton: UIButton = {
+        let button = UIButton()
+        let action = UIAction { [weak self] _ in
+            self?.pushDispatchViewController()
+        }
+        button.setTitle("DispatchQueue ViewController", for: .normal)
+        button.layer.backgroundColor = UIColor.red.cgColor
+        button.addAction(action, for: .touchUpInside)
+        return button
     }()
 
     // MARK: life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    deinit {
+        print("MainViewController deinit")
     }
 
     override func render() {
-        view.addSubview(textLabel)
-        textLabel.snp.makeConstraints {
+        view.addSubview(dispatchNavigatorButton)
+        dispatchNavigatorButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(20)
             $0.centerX.centerY.equalToSuperview()
+            $0.height.equalTo(60)
         }
     }
 
+    // MARK: - func
+
+    private func pushDispatchViewController() {
+        self.navigationController?.pushViewController(DispatchQueueExampleViewController(), animated: true)
+    }
 
 }
 

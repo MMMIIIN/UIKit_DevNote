@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */; };
+		39C95813287ED26C00A04A2B /* DispatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C95812287ED26C00A04A2B /* DispatchCell.swift */; };
+		39C95815287ED4DF00A04A2B /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */; };
 		39EC86D928698FDE0031EA61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC86D828698FDE0031EA61 /* AppDelegate.swift */; };
 		39EC86DB28698FDE0031EA61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC86DA28698FDE0031EA61 /* SceneDelegate.swift */; };
 		39EC86DD28698FDE0031EA61 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC86DC28698FDE0031EA61 /* MainViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExampleViewController.swift; sourceTree = "<group>"; };
+		39C95812287ED26C00A04A2B /* DispatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchCell.swift; sourceTree = "<group>"; };
+		39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		39EC86D528698FDE0031EA61 /* UIKit_DevNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKit_DevNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EC86D828698FDE0031EA61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39EC86DA28698FDE0031EA61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39C9580E287EBDDF00A04A2B /* DispatchQueue */ = {
+			isa = PBXGroup;
+			children = (
+				39C95811287ED24C00A04A2B /* Cell */,
+				39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */,
+			);
+			path = DispatchQueue;
+			sourceTree = "<group>";
+		};
+		39C95811287ED24C00A04A2B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				39C95812287ED26C00A04A2B /* DispatchCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		39EC86CC28698FDE0031EA61 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				39EC87012869AA2B0031EA61 /* Letter */,
+				39C9580E287EBDDF00A04A2B /* DispatchQueue */,
 				39EC86F0286990220031EA61 /* Main */,
 			);
 			path = Screens;
@@ -146,6 +170,7 @@
 			children = (
 				39EC86FC2869954A0031EA61 /* UIColor+Extension.swift */,
 				39EC87062869AD860031EA61 /* UIFont+Extension.swift */,
+				39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -304,11 +329,14 @@
 				39EC870B286B1C470031EA61 /* LetterCollectionViewCell.swift in Sources */,
 				39EC87072869AD860031EA61 /* UIFont+Extension.swift in Sources */,
 				39EC86DD28698FDE0031EA61 /* MainViewController.swift in Sources */,
+				39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */,
 				39EC86FB286993A00031EA61 /* BaseViewController.swift in Sources */,
+				39C95815287ED4DF00A04A2B /* NSObject+Extension.swift in Sources */,
 				39EC86D928698FDE0031EA61 /* AppDelegate.swift in Sources */,
 				39EC86DB28698FDE0031EA61 /* SceneDelegate.swift in Sources */,
 				39EC87032869AA410031EA61 /* LetterViewController.swift in Sources */,
 				39EC86FD2869954A0031EA61 /* UIColor+Extension.swift in Sources */,
+				39C95813287ED26C00A04A2B /* DispatchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
