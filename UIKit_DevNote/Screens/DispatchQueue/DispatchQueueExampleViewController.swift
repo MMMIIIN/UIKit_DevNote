@@ -21,8 +21,8 @@ class DispatchQueueExampleViewController: UIViewController {
     }
 
     private enum Size {
-        static let collectionHorizontalSpacing: CGFloat = 16.0
-        static let collectionVerticalSpacing: CGFloat = 18.0
+        static let collectionHorizontalSpacing: CGFloat = 20.0
+        static let collectionVerticalSpacing: CGFloat = 10.0
         static let cellWidth: CGFloat = UIScreen.main.bounds.size.width - collectionHorizontalSpacing * 2
         static let collectionInset = UIEdgeInsets(top: collectionVerticalSpacing,
             left: collectionHorizontalSpacing,
@@ -91,7 +91,7 @@ class DispatchQueueExampleViewController: UIViewController {
     }
 
     deinit {
-        print("deinit")
+        print("DispatchQueue ViewController deinit")
     }
 
     // MARK: - func
@@ -129,35 +129,5 @@ extension DispatchQueueExampleViewController: UICollectionViewDataSource {
 extension DispatchQueueExampleViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: Size.cellWidth, height: 50)
-    }
-}
-
-class DispatchCell: UICollectionViewCell {
-
-    // MARK: - property
-
-    private let textLabel: UILabel = {
-        let label = UILabel()
-        label.text = "testing"
-        label.textColor = .black
-        return label
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        render()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - life cycle
-    
-    private func render() {
-        addSubview(textLabel)
-        textLabel.snp.makeConstraints {
-            $0.centerX.centerY.equalToSuperview()
-        }
     }
 }
