@@ -17,6 +17,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         render()
         configUI()
+        setupNavigationPopGesture()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,5 +31,10 @@ class BaseViewController: UIViewController {
     
     func configUI() {
         view.backgroundColor = .backgroundGrey
+    }
+    
+    private func setupNavigationPopGesture() {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
 }
