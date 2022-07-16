@@ -22,13 +22,23 @@ class MainViewController: BaseViewController {
         button.addAction(action, for: .touchUpInside)
         return button
     }()
+    private lazy var letterNavigationButton: UIButton = {
+        let button = UIButton()
+        let action = UIAction { [weak self] _ in
+            self?.pushLetterViewController()
+        }
+        button.setTitle("Letter ViewController", for: .normal)
+        button.layer.backgroundColor = UIColor.red.cgColor
+        button.addAction(action, for: .touchUpInside)
+        return button
+    }()
 
     // MARK: life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     deinit {
         print("MainViewController deinit")
     }
@@ -40,6 +50,13 @@ class MainViewController: BaseViewController {
             $0.centerX.centerY.equalToSuperview()
             $0.height.equalTo(60)
         }
+        
+        view.addSubview(letterNavigationButton)
+        letterNavigationButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.top.equalTo(dispatchNavigatorButton.snp.bottom).offset(30)
+            $0.height.equalTo(60)
+        }
     }
 
     // MARK: - func
@@ -48,5 +65,9 @@ class MainViewController: BaseViewController {
         self.navigationController?.pushViewController(DispatchQueueExampleViewController(), animated: true)
     }
 
+    private func pushLetterViewController() {
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.pushViewController(LetterViewController(), animated: true)
+    }
 }
 

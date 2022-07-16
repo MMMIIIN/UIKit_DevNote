@@ -118,9 +118,9 @@
 		39EC86ED286990120031EA61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				39EC86F0286990220031EA61 /* Main */,
 				39EC87012869AA2B0031EA61 /* Letter */,
 				39C9580E287EBDDF00A04A2B /* DispatchQueue */,
-				39EC86F0286990220031EA61 /* Main */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
