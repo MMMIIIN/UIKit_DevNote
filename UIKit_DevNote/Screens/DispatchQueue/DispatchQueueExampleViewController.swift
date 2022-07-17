@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class DispatchQueueExampleViewController: UIViewController {
+class DispatchQueueExampleViewController: BaseViewController {
     let imageUrl = "https://picsum.photos/1280/720/?random"
 
     private lazy var testUIImage = UIImage() {
@@ -61,11 +61,10 @@ class DispatchQueueExampleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        render()
         setupCollectionView()
     }
 
-    private func render() {
+    override func render() {
         view.addSubview(testImage)
         testImage.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(20)
