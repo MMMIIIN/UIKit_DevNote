@@ -19,6 +19,10 @@
 		39EC86FB286993A00031EA61 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC86FA286993A00031EA61 /* BaseViewController.swift */; };
 		39EC86FD2869954A0031EA61 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC86FC2869954A0031EA61 /* UIColor+Extension.swift */; };
 		39EC8700286996310031EA61 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 39EC86FF286996310031EA61 /* SnapKit */; };
+		39EC87032869AA410031EA61 /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC87022869AA410031EA61 /* LetterViewController.swift */; };
+		39EC87072869AD860031EA61 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC87062869AD860031EA61 /* UIFont+Extension.swift */; };
+		39EC87082869B0F00031EA61 /* DungGeunMo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39EC87052869ACFF0031EA61 /* DungGeunMo.otf */; };
+		39EC870B286B1C470031EA61 /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EC870A286B1C470031EA61 /* LetterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		39EC86E628698FE00031EA61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39EC86FA286993A00031EA61 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		39EC86FC2869954A0031EA61 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		39EC87022869AA410031EA61 /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
+		39EC87052869ACFF0031EA61 /* DungGeunMo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DungGeunMo.otf; sourceTree = "<group>"; };
+		39EC87062869AD860031EA61 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		39EC870A286B1C470031EA61 /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +118,9 @@
 		39EC86ED286990120031EA61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				39C9580E287EBDDF00A04A2B /* DispatchQueue */,
 				39EC86F0286990220031EA61 /* Main */,
+				39EC87012869AA2B0031EA61 /* Letter */,
+				39C9580E287EBDDF00A04A2B /* DispatchQueue */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 		39EC86F12869902F0031EA61 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				39EC87042869ACF60031EA61 /* Fonts */,
 				39EC86E128698FE00031EA61 /* Assets.xcassets */,
 				39EC86F9286990B60031EA61 /* Storyboards */,
 			);
@@ -159,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				39EC86FC2869954A0031EA61 /* UIColor+Extension.swift */,
+				39EC87062869AD860031EA61 /* UIFont+Extension.swift */,
 				39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */,
 			);
 			path = Extension;
@@ -210,6 +221,31 @@
 				39EC86E328698FE00031EA61 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		39EC87012869AA2B0031EA61 /* Letter */ = {
+			isa = PBXGroup;
+			children = (
+				39EC8709286B1C200031EA61 /* Cell */,
+				39EC87022869AA410031EA61 /* LetterViewController.swift */,
+			);
+			path = Letter;
+			sourceTree = "<group>";
+		};
+		39EC87042869ACF60031EA61 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				39EC87052869ACFF0031EA61 /* DungGeunMo.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		39EC8709286B1C200031EA61 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				39EC870A286B1C470031EA61 /* LetterCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +314,7 @@
 			files = (
 				39EC86E528698FE00031EA61 /* LaunchScreen.storyboard in Resources */,
 				39EC86E228698FE00031EA61 /* Assets.xcassets in Resources */,
+				39EC87082869B0F00031EA61 /* DungGeunMo.otf in Resources */,
 				39EC86E028698FDE0031EA61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +326,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39EC870B286B1C470031EA61 /* LetterCollectionViewCell.swift in Sources */,
+				39EC87072869AD860031EA61 /* UIFont+Extension.swift in Sources */,
 				39EC86DD28698FDE0031EA61 /* MainViewController.swift in Sources */,
 				39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */,
 				39EC86FB286993A00031EA61 /* BaseViewController.swift in Sources */,
 				39C95815287ED4DF00A04A2B /* NSObject+Extension.swift in Sources */,
 				39EC86D928698FDE0031EA61 /* AppDelegate.swift in Sources */,
 				39EC86DB28698FDE0031EA61 /* SceneDelegate.swift in Sources */,
+				39EC87032869AA410031EA61 /* LetterViewController.swift in Sources */,
 				39EC86FD2869954A0031EA61 /* UIColor+Extension.swift in Sources */,
 				39C95813287ED26C00A04A2B /* DispatchCell.swift in Sources */,
 			);
