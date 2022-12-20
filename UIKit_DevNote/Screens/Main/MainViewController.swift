@@ -7,11 +7,13 @@
 
 import UIKit
 
+import Then
 import SnapKit
 
 class MainViewController: BaseViewController {
 
     // MARK: property
+    
     private lazy var dispatchNavigatorButton: UIButton = {
         let button = UIButton()
         let action = UIAction { [weak self] _ in
@@ -22,6 +24,14 @@ class MainViewController: BaseViewController {
         button.addAction(action, for: .touchUpInside)
         return button
     }()
+    private lazy var alamofireNavigatorButton = UIButton().then {
+        $0.backgroundColor = .systemBlue
+        $0.setTitle("Alamofire ViewController", for: .normal)
+        let action = UIAction { [weak self] _ in
+            self?.pushAlamofireViewController()
+        }
+        $0.addAction(action, for: .touchUpInside)
+    }
 
     // MARK: life cycle
 
@@ -37,7 +47,16 @@ class MainViewController: BaseViewController {
         view.addSubview(dispatchNavigatorButton)
         dispatchNavigatorButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.centerX.centerY.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(40)
+            $0.height.equalTo(60)
+        }
+        
+        view.addSubview(alamofireNavigatorButton)
+        alamofireNavigatorButton.snp.makeConstraints {
+            $0.top.equalTo(dispatchNavigatorButton.snp.bottom).offset(40)
+            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(60)
         }
     }
@@ -47,6 +66,9 @@ class MainViewController: BaseViewController {
     private func pushDispatchViewController() {
         self.navigationController?.pushViewController(DispatchQueueExampleViewController(), animated: true)
     }
-
+    
+    private func pushAlamofireViewController() {
+        self.navigationController?.pushViewController(AlamofireViewController(), animated: true)
+    }
 }
 
