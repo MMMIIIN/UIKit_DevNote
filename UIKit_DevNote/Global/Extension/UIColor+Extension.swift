@@ -14,6 +14,10 @@ extension UIColor {
     static var backgroundGrey: UIColor {
         return UIColor(hex: "#242424")
     }
+    
+    static var darkGrey004: UIColor {
+        return UIColor(hex: "#343434")
+    }
 }
 
 extension UIColor {
