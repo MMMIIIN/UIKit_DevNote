@@ -42,6 +42,17 @@ class MainViewController: BaseViewController {
         }
         $0.addAction(action, for: .touchUpInside)
     }
+    private lazy var pinAndFlexNavigatorButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.setTitle("PinAndFlex ViewController", for: .normal)
+        let action = UIAction { [weak self] _ in
+            self?.pushPinAndFlexViewController()
+        }
+        button.addAction(action, for: .touchUpInside)
+        return button
+        
+    }()
 
     // MARK: life cycle
 
@@ -65,13 +76,21 @@ class MainViewController: BaseViewController {
         view.addSubview(letterNavigationButton)
         letterNavigationButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.top.equalTo(dispatchNavigatorButton.snp.bottom).offset(30)
+            $0.top.equalTo(dispatchNavigatorButton.snp.bottom).offset(40)
             $0.height.equalTo(60)
         }
         
         view.addSubview(alamofireNavigatorButton)
         alamofireNavigatorButton.snp.makeConstraints {
-            $0.top.equalTo(dispatchNavigatorButton.snp.bottom).offset(40)
+            $0.top.equalTo(letterNavigationButton.snp.bottom).offset(40)
+            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(60)
+        }
+        
+        view.addSubview(pinAndFlexNavigatorButton)
+        pinAndFlexNavigatorButton.snp.makeConstraints {
+            $0.top.equalTo(alamofireNavigatorButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(60)
@@ -92,5 +111,8 @@ class MainViewController: BaseViewController {
     private func pushAlamofireViewController() {
         self.navigationController?.pushViewController(AlamofireViewController(), animated: true)
     }
+    
+    private func pushPinAndFlexViewController() {
+        self.navigationController?.pushViewController(PinAndFlexViewController(), animated: true)
+    }
 }
-

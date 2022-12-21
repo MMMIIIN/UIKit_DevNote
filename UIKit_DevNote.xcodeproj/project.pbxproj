@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		393C693B2951EAC000F6744E /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 393C693A2951EAC000F6744E /* PinLayout */; };
-		393C693E2951EADB00F6744E /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 393C693D2951EADB00F6744E /* FlexLayout */; };
+		393C69412951EC2C00F6744E /* PinAndFlexLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */; };
+		393C69442951FEDF00F6744E /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 393C69432951FEDF00F6744E /* FlexLayout */; };
+		393C69462951FEDF00F6744E /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = 393C69452951FEDF00F6744E /* FlexLayoutYoga */; };
+		393C69482951FEDF00F6744E /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 393C69472951FEDF00F6744E /* FlexLayoutYogaKit */; };
 		39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */; };
 		39C95813287ED26C00A04A2B /* DispatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C95812287ED26C00A04A2B /* DispatchCell.swift */; };
 		39C95815287ED4DF00A04A2B /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */; };
@@ -33,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAndFlexLayoutViewController.swift; sourceTree = "<group>"; };
 		39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExampleViewController.swift; sourceTree = "<group>"; };
 		39C95812287ED26C00A04A2B /* DispatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchCell.swift; sourceTree = "<group>"; };
 		39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
@@ -62,15 +66,25 @@
 			files = (
 				39F52C392920EE8800B19A77 /* Alamofire in Frameworks */,
 				39EC8700286996310031EA61 /* SnapKit in Frameworks */,
-				393C693E2951EADB00F6744E /* FlexLayout in Frameworks */,
+				393C69442951FEDF00F6744E /* FlexLayout in Frameworks */,
+				393C69482951FEDF00F6744E /* FlexLayoutYogaKit in Frameworks */,
 				393C693B2951EAC000F6744E /* PinLayout in Frameworks */,
 				39F52C332920E87D00B19A77 /* Then in Frameworks */,
+				393C69462951FEDF00F6744E /* FlexLayoutYoga in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		393C693F2951EBF500F6744E /* Pin&FlexLayout */ = {
+			isa = PBXGroup;
+			children = (
+				393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */,
+			);
+			path = "Pin&FlexLayout";
+			sourceTree = "<group>";
+		};
 		39C9580E287EBDDF00A04A2B /* DispatchQueue */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +146,7 @@
 		39EC86ED286990120031EA61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				393C693F2951EBF500F6744E /* Pin&FlexLayout */,
 				39F52C342920EC0700B19A77 /* Alamofire */,
 				39EC86F0286990220031EA61 /* Main */,
 				39EC87012869AA2B0031EA61 /* Letter */,
@@ -302,7 +317,9 @@
 				39F52C322920E87D00B19A77 /* Then */,
 				39F52C382920EE8800B19A77 /* Alamofire */,
 				393C693A2951EAC000F6744E /* PinLayout */,
-				393C693D2951EADB00F6744E /* FlexLayout */,
+				393C69432951FEDF00F6744E /* FlexLayout */,
+				393C69452951FEDF00F6744E /* FlexLayoutYoga */,
+				393C69472951FEDF00F6744E /* FlexLayoutYogaKit */,
 			);
 			productName = UIKit_DevNote;
 			productReference = 39EC86D528698FDE0031EA61 /* UIKit_DevNote.app */;
@@ -337,7 +354,7 @@
 				39F52C312920E87D00B19A77 /* XCRemoteSwiftPackageReference "Then" */,
 				39F52C372920EE8800B19A77 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				393C69392951EAC000F6744E /* XCRemoteSwiftPackageReference "PinLayout" */,
-				393C693C2951EADB00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				393C69422951FEDF00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */,
 			);
 			productRefGroup = 39EC86D628698FDE0031EA61 /* Products */;
 			projectDirPath = "";
@@ -370,6 +387,7 @@
 				39EC870B286B1C470031EA61 /* LetterCollectionViewCell.swift in Sources */,
 				39EC87072869AD860031EA61 /* UIFont+Extension.swift in Sources */,
 				39EC86DD28698FDE0031EA61 /* MainViewController.swift in Sources */,
+				393C69412951EC2C00F6744E /* PinAndFlexLayoutViewController.swift in Sources */,
 				39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */,
 				39EC86FB286993A00031EA61 /* BaseViewController.swift in Sources */,
 				39F52C3E2921291300B19A77 /* AlamofireData.swift in Sources */,
@@ -612,7 +630,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		393C693C2951EADB00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+		393C69422951FEDF00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/layoutBox/FlexLayout.git";
 			requirement = {
@@ -652,10 +670,20 @@
 			package = 393C69392951EAC000F6744E /* XCRemoteSwiftPackageReference "PinLayout" */;
 			productName = PinLayout;
 		};
-		393C693D2951EADB00F6744E /* FlexLayout */ = {
+		393C69432951FEDF00F6744E /* FlexLayout */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 393C693C2951EADB00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			package = 393C69422951FEDF00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */;
 			productName = FlexLayout;
+		};
+		393C69452951FEDF00F6744E /* FlexLayoutYoga */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 393C69422951FEDF00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYoga;
+		};
+		393C69472951FEDF00F6744E /* FlexLayoutYogaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 393C69422951FEDF00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayoutYogaKit;
 		};
 		39EC86FF286996310031EA61 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
