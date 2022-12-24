@@ -51,9 +51,18 @@ class MainViewController: BaseViewController {
         }
         button.addAction(action, for: .touchUpInside)
         return button
-        
     }()
-
+    private lazy var bezierPathNavigatorButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.setTitle("BezierPath ViewController", for: .normal)
+        let action = UIAction { [weak self] _ in
+            self?.pushBezierPathViewController()
+        }
+        button.addAction(action, for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: life cycle
 
     override func viewDidLoad() {
@@ -95,6 +104,14 @@ class MainViewController: BaseViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(60)
         }
+        
+        view.addSubview(bezierPathNavigatorButton)
+        bezierPathNavigatorButton.snp.makeConstraints {
+            $0.top.equalTo(pinAndFlexNavigatorButton.snp.bottom).offset(40)
+            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(60)
+        }
     }
 
     // MARK: - func
@@ -114,5 +131,9 @@ class MainViewController: BaseViewController {
     
     private func pushPinAndFlexViewController() {
         self.navigationController?.pushViewController(PinAndFlexViewController(), animated: true)
+    }
+    
+    private func pushBezierPathViewController() {
+        self.navigationController?.pushViewController(BezierPathViewController(), animated: true)
     }
 }

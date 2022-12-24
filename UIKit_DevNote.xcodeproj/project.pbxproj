@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390B720B2956F8BF00F2F13D /* BezierPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B720A2956F8BF00F2F13D /* BezierPathViewController.swift */; };
 		393C693B2951EAC000F6744E /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 393C693A2951EAC000F6744E /* PinLayout */; };
 		393C69412951EC2C00F6744E /* PinAndFlexLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */; };
 		393C69442951FEDF00F6744E /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 393C69432951FEDF00F6744E /* FlexLayout */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		390B720A2956F8BF00F2F13D /* BezierPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathViewController.swift; sourceTree = "<group>"; };
 		393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAndFlexLayoutViewController.swift; sourceTree = "<group>"; };
 		39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExampleViewController.swift; sourceTree = "<group>"; };
 		39C95812287ED26C00A04A2B /* DispatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchCell.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		390B72092956F8B400F2F13D /* BezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				390B720A2956F8BF00F2F13D /* BezierPathViewController.swift */,
+			);
+			path = BezierPath;
+			sourceTree = "<group>";
+		};
 		393C693F2951EBF500F6744E /* Pin&FlexLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +156,7 @@
 		39EC86ED286990120031EA61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				390B72092956F8B400F2F13D /* BezierPath */,
 				393C693F2951EBF500F6744E /* Pin&FlexLayout */,
 				39F52C342920EC0700B19A77 /* Alamofire */,
 				39EC86F0286990220031EA61 /* Main */,
@@ -390,6 +401,7 @@
 				393C69412951EC2C00F6744E /* PinAndFlexLayoutViewController.swift in Sources */,
 				39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */,
 				39EC86FB286993A00031EA61 /* BaseViewController.swift in Sources */,
+				390B720B2956F8BF00F2F13D /* BezierPathViewController.swift in Sources */,
 				39F52C3E2921291300B19A77 /* AlamofireData.swift in Sources */,
 				39C95815287ED4DF00A04A2B /* NSObject+Extension.swift in Sources */,
 				39F52C362920EC2300B19A77 /* AlamofireViewController.swift in Sources */,
