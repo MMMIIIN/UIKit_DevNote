@@ -18,10 +18,6 @@ final class BezierPathViewController: BaseViewController {
             $0.edges.equalToSuperview()
         }
     }
-    
-    override func viewDidLayoutSubviews() {
-        bezierView.layoutIfNeeded()
-    }
 }
 
 final class BezierExamView: UIView {
@@ -59,23 +55,24 @@ final class BezierExamView: UIView {
         bezier.usesEvenOddFillRule = true
         return bezier
     }()
+    private let starView = StarView(frame: CGRect(origin: .zero, size: CGSize(width: 100, height: 100)))
     
     // MARK: - life cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
+        self.addSubview(starView)
     }
     
     required init?(coder: NSCoder) { nil }
     
     override func draw(_ rect: CGRect) {
-        UIView.animate(withDuration: 2, delay: 1) {
-            self.drawWood()
-            self.drawThirdTree()
-            self.drawSecondTree()
-            self.drawFirstTree()
-        }
+        drawWood()
+        drawThirdTree()
+        drawSecondTree()
+        drawFirstTree()
+        starView.frame = CGRect(x: Size.width / 2 - 50, y: 150, width: 100, height: 100)
     }
     
     // MARK: - func
@@ -115,5 +112,53 @@ final class BezierExamView: UIView {
         bezierPath.stroke()
         fillColor.set()
         bezierPath.fill()
+    }
+}
+
+final class StarView: UIView {
+    private lazy var width = self.frame.width
+    private lazy var height = self.frame.height
+    
+    // MARK: - property
+    
+    private let starBezierPath: UIBezierPath = {
+        let bezier = UIBezierPath()
+        bezier.lineWidth = 2
+        bezier.lineJoinStyle = .round
+        bezier.usesEvenOddFillRule = true
+        return bezier
+    }()
+    
+    // MARK: - life cycle
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = .clear
+    }
+    
+    required init?(coder: NSCoder) { nil }
+    
+    override func draw(_ rect: CGRect) {
+        drawStar()
+    }
+    
+    // MARK: - func
+    
+    private func drawStar() {
+        starBezierPath.move(to: CGPoint(x: width / 2, y: height * 0.01))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.33, y: height * 0.27))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.01, y: height * 0.35))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.22, y: height * 0.59))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.20, y: height * 0.90))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.50, y: height * 0.80))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.80, y: height * 0.90))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.77, y: height * 0.59))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.99, y: height * 0.35))
+        starBezierPath.addLine(to: CGPoint(x: width * 0.67, y: height * 0.27))
+        starBezierPath.close()
+        UIColor.black.set()
+        starBezierPath.stroke()
+        UIColor.systemYellow.set()
+        starBezierPath.fill()
     }
 }
