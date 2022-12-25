@@ -10,7 +10,13 @@ import UIKit
 import SnapKit
 
 final class BezierPathViewController: BaseViewController {
-    private let bezierView = BezierExamView()
+    private lazy var bezierView: BezierExamView = {
+        let view = BezierExamView()
+        view.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
+        view.addGestureRecognizer(tapGesture)
+        return view
+    }()
     
     override func render() {
         view.addSubview(bezierView)
@@ -18,6 +24,28 @@ final class BezierPathViewController: BaseViewController {
             $0.edges.equalToSuperview()
         }
     }
+    
+    @objc func tapAction(_ gestureRecognizer: UITapGestureRecognizer) {
+        let x = gestureRecognizer.location(in: gestureRecognizer.view).x
+        let y = gestureRecognizer.location(in: gestureRecognizer.view).y
+        view.addSubview(DecorationView(frame: CGRect(x: x - 10, y: y - 10, width: 20, height: 20)))
+    }
+}
+
+final class DecorationView: UIView {
+    private let colorSet: [UIColor] = [.red, .blue.withAlphaComponent(0.8), .orange, .purple, .systemPink]
+    
+    private let random = Int.random(in: 0..<5)
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.cornerRadius = frame.width / 2
+        self.backgroundColor = colorSet[random]
+    }
+    
+    required init?(coder: NSCoder) { nil }
 }
 
 final class BezierExamView: UIView {
