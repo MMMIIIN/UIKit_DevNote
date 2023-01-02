@@ -26,6 +26,16 @@ final class RxSwiftViewController: BaseViewController {
         button.addAction(action, for: .touchUpInside)
         return button
     }()
+    private lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Login", for: .normal)
+        button.backgroundColor = .systemPurple
+        let action = UIAction { [weak self] _ in
+            self?.pushLoginViewController()
+        }
+        button.addAction(action, for: .touchUpInside)
+        return button
+    }()
     
     override func render() {
         view.addSubview(stackView)
@@ -39,9 +49,19 @@ final class RxSwiftViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
+        stackView.addSubview(loginButton)
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(counterButton.snp.bottom).offset(30)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(60)
+        }
     }
     
     private func pushCounterViewController() {
         self.navigationController?.pushViewController(CounterViewController(), animated: true)
+    }
+    
+    private func pushLoginViewController() {
+        self.navigationController?.pushViewController(RxLoginViewController(), animated: true)
     }
 }
