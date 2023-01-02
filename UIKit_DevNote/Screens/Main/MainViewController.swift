@@ -14,6 +14,8 @@ class MainViewController: BaseViewController {
 
     // MARK: property
     
+    private let scrollView = UIScrollView()
+    private let stackView = UIStackView()
     private lazy var dispatchNavigatorButton: UIButton = {
         let button = UIButton()
         let action = UIAction { [weak self] _ in
@@ -72,6 +74,16 @@ class MainViewController: BaseViewController {
         button.addAction(action, for: .touchUpInside)
         return button
     }()
+    private lazy var combineNavigatorButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.setTitle("Combine ViewController", for: .normal)
+        let action = UIAction { [weak self] _ in
+            self?.pushCombineViewController()
+        }
+        button.addAction(action, for: .touchUpInside)
+        return button
+    }()
     
     // MARK: life cycle
 
@@ -84,7 +96,17 @@ class MainViewController: BaseViewController {
     }
 
     override func render() {
-        view.addSubview(dispatchNavigatorButton)
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
+            $0.edges.width.equalToSuperview()
+        }
+        
+        scrollView.addSubview(stackView)
+        stackView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        scrollView.addSubview(dispatchNavigatorButton)
         dispatchNavigatorButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.centerX.equalToSuperview()
@@ -92,14 +114,14 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        view.addSubview(letterNavigationButton)
+        scrollView.addSubview(letterNavigationButton)
         letterNavigationButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.top.equalTo(dispatchNavigatorButton.snp.bottom).offset(40)
             $0.height.equalTo(60)
         }
         
-        view.addSubview(alamofireNavigatorButton)
+        scrollView.addSubview(alamofireNavigatorButton)
         alamofireNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(letterNavigationButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
@@ -107,7 +129,7 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        view.addSubview(pinAndFlexNavigatorButton)
+        scrollView.addSubview(pinAndFlexNavigatorButton)
         pinAndFlexNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(alamofireNavigatorButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
@@ -115,7 +137,7 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        view.addSubview(bezierPathNavigatorButton)
+        scrollView.addSubview(bezierPathNavigatorButton)
         bezierPathNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(pinAndFlexNavigatorButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
@@ -123,9 +145,17 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        view.addSubview(rxswiftNavigatorButton)
+        scrollView.addSubview(rxswiftNavigatorButton)
         rxswiftNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(bezierPathNavigatorButton.snp.bottom).offset(40)
+            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(60)
+        }
+        
+        scrollView.addSubview(combineNavigatorButton)
+        combineNavigatorButton.snp.makeConstraints {
+            $0.top.equalTo(rxswiftNavigatorButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(60)
@@ -157,5 +187,9 @@ class MainViewController: BaseViewController {
     
     private func pushRxSwiftViewController() {
         self.navigationController?.pushViewController(RxSwiftViewController(), animated: true)
+    }
+    
+    private func pushCombineViewController() {
+        self.navigationController?.pushViewController(CombineViewController(), animated: true)
     }
 }
