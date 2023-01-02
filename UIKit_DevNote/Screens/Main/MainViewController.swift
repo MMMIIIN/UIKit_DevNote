@@ -62,6 +62,16 @@ class MainViewController: BaseViewController {
         button.addAction(action, for: .touchUpInside)
         return button
     }()
+    private lazy var rxswiftNavigatorButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.setTitle("RxSwift ViewController", for: .normal)
+        let action = UIAction { [weak self] _ in
+            self?.pushRxSwiftViewController()
+        }
+        button.addAction(action, for: .touchUpInside)
+        return button
+    }()
     
     // MARK: life cycle
 
@@ -112,6 +122,14 @@ class MainViewController: BaseViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(60)
         }
+        
+        view.addSubview(rxswiftNavigatorButton)
+        rxswiftNavigatorButton.snp.makeConstraints {
+            $0.top.equalTo(bezierPathNavigatorButton.snp.bottom).offset(40)
+            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(60)
+        }
     }
 
     // MARK: - func
@@ -135,5 +153,9 @@ class MainViewController: BaseViewController {
     
     private func pushBezierPathViewController() {
         self.navigationController?.pushViewController(BezierPathViewController(), animated: true)
+    }
+    
+    private func pushRxSwiftViewController() {
+        self.navigationController?.pushViewController(RxSwiftViewController(), animated: true)
     }
 }
