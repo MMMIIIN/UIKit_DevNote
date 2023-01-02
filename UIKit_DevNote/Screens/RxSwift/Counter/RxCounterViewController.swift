@@ -1,5 +1,5 @@
 //
-//  CounterViewController.swift
+//  RxCounterViewController.swift
 //  UIKit_DevNote
 //
 //  Created by Mingwan Choi on 2023/01/02.
@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import SnapKit
 
-final class CounterViewController: BaseViewController {
+final class RxCounterViewController: BaseViewController {
     private var disposeBag = DisposeBag()
     private let countRelay = BehaviorRelay<Int>(value: 10)
     

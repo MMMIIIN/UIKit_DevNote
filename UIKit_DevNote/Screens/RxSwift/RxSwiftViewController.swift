@@ -58,7 +58,7 @@ final class RxSwiftViewController: BaseViewController {
     }
     
     private func pushCounterViewController() {
-        self.navigationController?.pushViewController(CounterViewController(), animated: true)
+        self.navigationController?.pushViewController(RxCounterViewController(), animated: true)
     }
     
     private func pushLoginViewController() {
