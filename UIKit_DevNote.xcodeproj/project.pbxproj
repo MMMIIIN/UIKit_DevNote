@@ -13,6 +13,9 @@
 		393C69442951FEDF00F6744E /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 393C69432951FEDF00F6744E /* FlexLayout */; };
 		393C69462951FEDF00F6744E /* FlexLayoutYoga in Frameworks */ = {isa = PBXBuildFile; productRef = 393C69452951FEDF00F6744E /* FlexLayoutYoga */; };
 		393C69482951FEDF00F6744E /* FlexLayoutYogaKit in Frameworks */ = {isa = PBXBuildFile; productRef = 393C69472951FEDF00F6744E /* FlexLayoutYogaKit */; };
+		3998E8722961D54F00541752 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3998E8712961D54F00541752 /* RxCocoa */; };
+		3998E8742961D54F00541752 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3998E8732961D54F00541752 /* RxSwift */; };
+		3998E8772961D5F200541752 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998E8762961D5F200541752 /* RxSwiftViewController.swift */; };
 		39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */; };
 		39C95813287ED26C00A04A2B /* DispatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C95812287ED26C00A04A2B /* DispatchCell.swift */; };
 		39C95815287ED4DF00A04A2B /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */; };
@@ -39,6 +42,7 @@
 /* Begin PBXFileReference section */
 		390B720A2956F8BF00F2F13D /* BezierPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathViewController.swift; sourceTree = "<group>"; };
 		393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAndFlexLayoutViewController.swift; sourceTree = "<group>"; };
+		3998E8762961D5F200541752 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExampleViewController.swift; sourceTree = "<group>"; };
 		39C95812287ED26C00A04A2B /* DispatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchCell.swift; sourceTree = "<group>"; };
 		39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
@@ -66,12 +70,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3998E8742961D54F00541752 /* RxSwift in Frameworks */,
 				39F52C392920EE8800B19A77 /* Alamofire in Frameworks */,
 				39EC8700286996310031EA61 /* SnapKit in Frameworks */,
 				393C69442951FEDF00F6744E /* FlexLayout in Frameworks */,
 				393C69482951FEDF00F6744E /* FlexLayoutYogaKit in Frameworks */,
 				393C693B2951EAC000F6744E /* PinLayout in Frameworks */,
 				39F52C332920E87D00B19A77 /* Then in Frameworks */,
+				3998E8722961D54F00541752 /* RxCocoa in Frameworks */,
 				393C69462951FEDF00F6744E /* FlexLayoutYoga in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +99,14 @@
 				393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */,
 			);
 			path = "Pin&FlexLayout";
+			sourceTree = "<group>";
+		};
+		3998E8752961D5DE00541752 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3998E8762961D5F200541752 /* RxSwiftViewController.swift */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 		39C9580E287EBDDF00A04A2B /* DispatchQueue */ = {
@@ -156,6 +170,7 @@
 		39EC86ED286990120031EA61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3998E8752961D5DE00541752 /* RxSwift */,
 				390B72092956F8B400F2F13D /* BezierPath */,
 				393C693F2951EBF500F6744E /* Pin&FlexLayout */,
 				39F52C342920EC0700B19A77 /* Alamofire */,
@@ -331,6 +346,8 @@
 				393C69432951FEDF00F6744E /* FlexLayout */,
 				393C69452951FEDF00F6744E /* FlexLayoutYoga */,
 				393C69472951FEDF00F6744E /* FlexLayoutYogaKit */,
+				3998E8712961D54F00541752 /* RxCocoa */,
+				3998E8732961D54F00541752 /* RxSwift */,
 			);
 			productName = UIKit_DevNote;
 			productReference = 39EC86D528698FDE0031EA61 /* UIKit_DevNote.app */;
@@ -366,6 +383,7 @@
 				39F52C372920EE8800B19A77 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				393C69392951EAC000F6744E /* XCRemoteSwiftPackageReference "PinLayout" */,
 				393C69422951FEDF00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				3998E8702961D54F00541752 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 39EC86D628698FDE0031EA61 /* Products */;
 			projectDirPath = "";
@@ -399,6 +417,7 @@
 				39EC87072869AD860031EA61 /* UIFont+Extension.swift in Sources */,
 				39EC86DD28698FDE0031EA61 /* MainViewController.swift in Sources */,
 				393C69412951EC2C00F6744E /* PinAndFlexLayoutViewController.swift in Sources */,
+				3998E8772961D5F200541752 /* RxSwiftViewController.swift in Sources */,
 				39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */,
 				39EC86FB286993A00031EA61 /* BaseViewController.swift in Sources */,
 				390B720B2956F8BF00F2F13D /* BezierPathViewController.swift in Sources */,
@@ -652,6 +671,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		3998E8702961D54F00541752 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		39EC86FE286996310031EA61 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -698,6 +725,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 393C69422951FEDF00F6744E /* XCRemoteSwiftPackageReference "FlexLayout" */;
 			productName = FlexLayoutYogaKit;
+		};
+		3998E8712961D54F00541752 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3998E8702961D54F00541752 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		3998E8732961D54F00541752 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3998E8702961D54F00541752 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 		39EC86FF286996310031EA61 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
