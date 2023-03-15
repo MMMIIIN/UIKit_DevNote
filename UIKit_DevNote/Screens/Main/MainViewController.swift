@@ -15,7 +15,11 @@ class MainViewController: BaseViewController {
     // MARK: property
     
     private let scrollView = UIScrollView()
-    private let stackView = UIStackView()
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        return stackView
+    }()
     private lazy var dispatchNavigatorButton: UIButton = {
         let button = UIButton()
         let action = UIAction { [weak self] _ in
@@ -84,6 +88,16 @@ class MainViewController: BaseViewController {
         button.addAction(action, for: .touchUpInside)
         return button
     }()
+    private lazy var palygroundNavigatiorButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemBlue
+        button.setTitle("Playground ViewController", for: .normal)
+        let action = UIAction { [weak self] _ in
+            self?.pushPlaygroundViewController()
+        }
+        button.addAction(action, for: .touchUpInside)
+        return button
+    }()
     
     // MARK: life cycle
 
@@ -98,15 +112,15 @@ class MainViewController: BaseViewController {
     override func render() {
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints {
-            $0.edges.width.equalToSuperview()
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
         scrollView.addSubview(stackView)
         stackView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.width.equalToSuperview()
         }
         
-        scrollView.addSubview(dispatchNavigatorButton)
+        stackView.addSubview(dispatchNavigatorButton)
         dispatchNavigatorButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.centerX.equalToSuperview()
@@ -114,14 +128,14 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        scrollView.addSubview(letterNavigationButton)
+        stackView.addSubview(letterNavigationButton)
         letterNavigationButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.top.equalTo(dispatchNavigatorButton.snp.bottom).offset(40)
             $0.height.equalTo(60)
         }
         
-        scrollView.addSubview(alamofireNavigatorButton)
+        stackView.addSubview(alamofireNavigatorButton)
         alamofireNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(letterNavigationButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
@@ -129,7 +143,7 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        scrollView.addSubview(pinAndFlexNavigatorButton)
+        stackView.addSubview(pinAndFlexNavigatorButton)
         pinAndFlexNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(alamofireNavigatorButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
@@ -137,7 +151,7 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        scrollView.addSubview(bezierPathNavigatorButton)
+        stackView.addSubview(bezierPathNavigatorButton)
         bezierPathNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(pinAndFlexNavigatorButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
@@ -145,7 +159,7 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        scrollView.addSubview(rxswiftNavigatorButton)
+        stackView.addSubview(rxswiftNavigatorButton)
         rxswiftNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(bezierPathNavigatorButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
@@ -153,12 +167,21 @@ class MainViewController: BaseViewController {
             $0.height.equalTo(60)
         }
         
-        scrollView.addSubview(combineNavigatorButton)
+        stackView.addSubview(combineNavigatorButton)
         combineNavigatorButton.snp.makeConstraints {
             $0.top.equalTo(rxswiftNavigatorButton.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(60)
+        }
+        
+        stackView.addSubview(palygroundNavigatiorButton)
+        palygroundNavigatiorButton.snp.makeConstraints {
+            $0.top.equalTo(combineNavigatorButton.snp.bottom).offset(40)
+            $0.centerX.equalToSuperview()
+            $0.left.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(60)
+            $0.bottom.equalToSuperview()
         }
     }
 
@@ -191,5 +214,9 @@ class MainViewController: BaseViewController {
     
     private func pushCombineViewController() {
         self.navigationController?.pushViewController(CombineViewController(), animated: true)
+    }
+    
+    private func pushPlaygroundViewController() {
+        self.navigationController?.pushViewController(PlayGroundViewController(), animated: true)
     }
 }

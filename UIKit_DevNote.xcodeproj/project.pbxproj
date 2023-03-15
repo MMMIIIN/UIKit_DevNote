@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		390B720B2956F8BF00F2F13D /* BezierPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B720A2956F8BF00F2F13D /* BezierPathViewController.swift */; };
+		391D38D929C1A47B00A6BFED /* PlayGroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D38D829C1A47B00A6BFED /* PlayGroundViewController.swift */; };
 		393C693B2951EAC000F6744E /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 393C693A2951EAC000F6744E /* PinLayout */; };
 		393C69412951EC2C00F6744E /* PinAndFlexLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */; };
 		393C69442951FEDF00F6744E /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 393C69432951FEDF00F6744E /* FlexLayout */; };
@@ -21,6 +22,8 @@
 		3998E8812962B33C00541752 /* RxLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998E8802962B33C00541752 /* RxLoginViewController.swift */; };
 		3998E8842962D78900541752 /* RxLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998E8832962D78900541752 /* RxLoginViewModel.swift */; };
 		3998E8882962F15000541752 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998E8872962F15000541752 /* CombineViewController.swift */; };
+		3998E88C2962F47C00541752 /* CombineCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998E88B2962F47C00541752 /* CombineCounterViewController.swift */; };
+		3998E8902962F5EE00541752 /* CombineCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3998E88F2962F5EE00541752 /* CombineCounterViewModel.swift */; };
 		39C95810287EBDF100A04A2B /* DispatchQueueExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */; };
 		39C95813287ED26C00A04A2B /* DispatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C95812287ED26C00A04A2B /* DispatchCell.swift */; };
 		39C95815287ED4DF00A04A2B /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */; };
@@ -46,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		390B720A2956F8BF00F2F13D /* BezierPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathViewController.swift; sourceTree = "<group>"; };
+		391D38D829C1A47B00A6BFED /* PlayGroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGroundViewController.swift; sourceTree = "<group>"; };
 		393C69402951EC2C00F6744E /* PinAndFlexLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAndFlexLayoutViewController.swift; sourceTree = "<group>"; };
 		3998E8762961D5F200541752 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
 		3998E8792962B01C00541752 /* RxCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCounterViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		3998E8802962B33C00541752 /* RxLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLoginViewController.swift; sourceTree = "<group>"; };
 		3998E8832962D78900541752 /* RxLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLoginViewModel.swift; sourceTree = "<group>"; };
 		3998E8872962F15000541752 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
+		3998E88B2962F47C00541752 /* CombineCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCounterViewController.swift; sourceTree = "<group>"; };
+		3998E88F2962F5EE00541752 /* CombineCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineCounterViewModel.swift; sourceTree = "<group>"; };
 		39C9580F287EBDF100A04A2B /* DispatchQueueExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueExampleViewController.swift; sourceTree = "<group>"; };
 		39C95812287ED26C00A04A2B /* DispatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchCell.swift; sourceTree = "<group>"; };
 		39C95814287ED4DF00A04A2B /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
@@ -101,6 +107,14 @@
 				390B720A2956F8BF00F2F13D /* BezierPathViewController.swift */,
 			);
 			path = BezierPath;
+			sourceTree = "<group>";
+		};
+		391D38D729C1A46F00A6BFED /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				391D38D829C1A47B00A6BFED /* PlayGroundViewController.swift */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 		393C693F2951EBF500F6744E /* Pin&FlexLayout */ = {
@@ -175,8 +189,26 @@
 		3998E8862962F13D00541752 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				3998E88E2962F5DC00541752 /* ViewModel */,
+				3998E88D2962F5D700541752 /* View */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		3998E88D2962F5D700541752 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3998E88B2962F47C00541752 /* CombineCounterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3998E88E2962F5DC00541752 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3998E88F2962F5EE00541752 /* CombineCounterViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		39C9580E287EBDDF00A04A2B /* DispatchQueue */ = {
@@ -240,6 +272,7 @@
 		39EC86ED286990120031EA61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				391D38D729C1A46F00A6BFED /* Playground */,
 				3998E8852962F12E00541752 /* Combine */,
 				3998E8752961D5DE00541752 /* RxSwift */,
 				390B72092956F8B400F2F13D /* BezierPath */,
@@ -485,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39EC870B286B1C470031EA61 /* LetterCollectionViewCell.swift in Sources */,
+				3998E8902962F5EE00541752 /* CombineCounterViewModel.swift in Sources */,
 				39EC87072869AD860031EA61 /* UIFont+Extension.swift in Sources */,
 				3998E8842962D78900541752 /* RxLoginViewModel.swift in Sources */,
 				39EC86DD28698FDE0031EA61 /* MainViewController.swift in Sources */,
@@ -495,6 +529,7 @@
 				39EC86FB286993A00031EA61 /* BaseViewController.swift in Sources */,
 				3998E8812962B33C00541752 /* RxLoginViewController.swift in Sources */,
 				390B720B2956F8BF00F2F13D /* BezierPathViewController.swift in Sources */,
+				391D38D929C1A47B00A6BFED /* PlayGroundViewController.swift in Sources */,
 				39F52C3E2921291300B19A77 /* AlamofireData.swift in Sources */,
 				39C95815287ED4DF00A04A2B /* NSObject+Extension.swift in Sources */,
 				39F52C362920EC2300B19A77 /* AlamofireViewController.swift in Sources */,
@@ -504,6 +539,7 @@
 				39F52C41292129CD00B19A77 /* AlamofireManager.swift in Sources */,
 				39EC87032869AA410031EA61 /* LetterViewController.swift in Sources */,
 				39EC86FD2869954A0031EA61 /* UIColor+Extension.swift in Sources */,
+				3998E88C2962F47C00541752 /* CombineCounterViewController.swift in Sources */,
 				3998E8882962F15000541752 /* CombineViewController.swift in Sources */,
 				39C95813287ED26C00A04A2B /* DispatchCell.swift in Sources */,
 			);
